@@ -1,0 +1,25 @@
+---
+layout: default
+title: Home
+---
+<div class="row"><div class="col-12 mb-2 mt-2"><h4 class="text-primary">Services We Offer</h4></div></div>
+<div class="row">
+    {% assign items = site.services | sort: "priority" %}
+    {% for service in items %}
+    <div class="col-sm-offset-1 col-sm-12 col-md-offset-1 col-md-6 col-lg-offset-1 col-lg-4 mb-3">
+        <a href="/services/{{service.name}}.html">
+        <div class="card h-100">
+            <div class="card-header">{{service.title}}</div>
+            <div class="card-body">
+                <div class="row pb-2">
+                    <img src="/assets/images{{service.img}}" class="img-thumbnail border-0 col-6 offset-3"/>
+                </div>
+                <div class="row"><div class="col-10 offset-1 text-center">{{service.tagLine}}</div></div>
+
+
+            </div>
+        </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
