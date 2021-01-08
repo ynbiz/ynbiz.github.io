@@ -2,6 +2,11 @@
 <html lang="en">
 {% include header.html %}
 <body>
+{% if page.landing %}
+<header>
+    {% include {{page.landing}}.html %}
+</header>
+{% endif %}
 {% include navbar.html %}
 <main class="container">
     {{ content }}
