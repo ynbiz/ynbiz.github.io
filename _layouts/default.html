@@ -6,6 +6,10 @@
 <header>
     {% include {{page.landing}}.html %}
 </header>
+{% else %}
+<header>
+    {% include none-landing.html %}
+</header>
 {% endif %}
 {% include navbar.html %}
 <main class="container">

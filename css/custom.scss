@@ -9,14 +9,63 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700" !defaul
 // Navbar ======================================================================
 
 .navbar {
-
-
   &.bg-dark {
     background-color: $body-bg !important;
   }
 
   &.bg-light {
     background-color: $gray-500 !important;
+  }
+}
+
+.navbar-transparent {
+  .navbar-brand {
+    color: $navbar-transparent-brand-color;
+
+    @include hover-focus {
+      color: $navbar-transparent-brand-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-transparent-color;
+
+      @include hover-focus {
+        color: $navbar-transparent-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-transparent-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-transparent-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-transparent-color;
+    border-color: $navbar-transparent-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-transparent-toggler-icon-bg;
+  }
+
+  .navbar-text {
+    color: $navbar-transparent-color;
+    a {
+      color: $navbar-transparent-active-color;
+
+      @include hover-focus {
+        color: $navbar-transparent-active-color;
+      }
+    }
   }
 }
 
@@ -294,4 +343,9 @@ header,
 }
 .fixed-top {
   transition: background-color linear 1s;
+
+}
+.tagline {
+  padding-top: 50vh;
+  color: $yellow;
 }
