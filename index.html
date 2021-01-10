@@ -3,8 +3,8 @@ layout: default
 title: Home
 landing: "home-landing"
 ---
-<a id="Services">
-<div class="row"><div class="col-12 mb-4 mt-4"><h4 class="text-primary text-center font-weight-bold">Services We Offer</h4></div></div>
+<a id="Offerings">
+<div class="row"><div class="col-12 mb-4 mt-4"><h4 class="text-primary text-center font-weight-bold">Our Unique Offerings</h4></div></div>
 <div class="row">
     {% assign items = site.services | sort: "priority" %}
     {% for service in items %}
@@ -14,7 +14,7 @@ landing: "home-landing"
             <div class="card-header">{{service.title}}</div>
             <div class="card-body">
                 <div class="row pb-2">
-                    <img src="/assets/images{{service.img}}" class="img-thumbnail border-0 col-6 offset-3"/>
+                    <img src="/assets/images/offerings/{{service.img}}" class="img-thumbnail border-0 col-6 offset-3"/>
                 </div>
                 <div class="row"><div class="col-10 offset-1 text-center">{{service.tagLine}}</div></div>
 
