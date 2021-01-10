@@ -345,7 +345,15 @@ header,
   transition: background-color linear 1s;
 
 }
-.tagline {
+.mask .container{
   padding-top: 50vh;
-  color: $yellow;
+  .tagline {
+    color: transparent;
+    background-image: linear-gradient(35deg, $blue, $white);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
 }
+
